@@ -11,7 +11,7 @@ export class ApiClientService {
   private httpClient = inject(HttpClient);
 
   public getPokemonValue(guess: GuessWord): Observable<ResponseWord>{
-    return this.httpClient.get<ResponseWord>(`https://tp21.papediop11.deno.net/?word=${guess}`)
+    return this.httpClient.get<ResponseWord>(`https://tp21.papediop11.deno.net?word=${guess}`)
   }
 }
 
